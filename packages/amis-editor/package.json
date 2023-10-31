@@ -1,10 +1,14 @@
 {
-  "name": "amis-editor",
-  "version": "5.6.1",
+  "name": "xxd-amis-editor",
+  "version": "1.1.2",
   "description": "amis 可视化编辑器",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.org/"
+  },
   "exports": {
     ".": {
       "require": "./lib/index.js",
@@ -107,5 +111,8 @@
     "i18n-runtime": "*",
     "react": ">=16.8.6",
     "react-dom": ">=16.8.6"
+  },
+  "directories": {
+    "example": "examples"
   }
 }

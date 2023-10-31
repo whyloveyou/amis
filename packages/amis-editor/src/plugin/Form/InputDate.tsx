@@ -149,7 +149,7 @@ export class DateControlPlugin extends BasePlugin {
   isBaseComponent = true;
   // 添加源对应组件中文名称 & type字段
   searchKeywords =
-    '日期框、input-datetime、日期时间框、input-time、时间框、input-month、月份框、input-quarter、季度框、input-year、年框、年份框、年份选择';
+    '日期框、input-datetime、日期时间框、input-time、时间框、input-month、月份框、input-quarter、季度框、input-year、年框';
   description = '年月日选择，支持相对值设定，如<code>+2days</code>两天后';
   docLink = '/amis/zh-CN/components/form/input-date';
   tags = ['表单项'];
@@ -293,7 +293,7 @@ export class DateControlPlugin extends BasePlugin {
 
                     form.setValues({
                       placeholder: DateType[type]?.placeholder,
-                      valueFormat: 'X',
+                      valueFormat: type === 'time' ? 'HH:mm' : 'X',
                       displayFormat: DateType[type]?.format,
                       minDate: '',
                       maxDate: '',
@@ -308,7 +308,7 @@ export class DateControlPlugin extends BasePlugin {
                     '值格式',
                     '提交数据前将根据设定格式化数据，请参考 <a href="https://momentjs.com/" target="_blank">moment</a> 中的格式用法。'
                   ),
-                  pipeIn: defaultValue('X'),
+                  pipeIn: defaultValue('YYYY-MM-DD'),
                   clearable: true,
                   onChange: (
                     value: string,

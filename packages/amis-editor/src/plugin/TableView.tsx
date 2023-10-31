@@ -96,7 +96,6 @@ export class TableViewPlugin extends BasePlugin {
   icon = 'fa fa-columns';
   pluginIcon = 'table-view-plugin';
   description = '表格类型的展现';
-  searchKeywords = '表格展现';
   docLink = '/amis/zh-CN/components/table-view';
   tags = ['功能'];
   scaffold = {
